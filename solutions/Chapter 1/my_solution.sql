@@ -83,3 +83,38 @@ ORDER BY name;
 -- ################################################
 -- Try It: Table and column description SQL commands
 -- ################################################
+-- 0. Prep
+.mode html
+.headers on
+.output adventureworks_docs3.html
+
+-- 1. List all tables in AdventureWorks using .print statements
+-- .print some text here
+-- .print ----------------------------
+-- <some query here>
+
+-- 2. Pragma
+-- ex
+-- .print <tablename> Table
+-- .print -------------------------------------
+-- PRAGMA table_info('DimCustomer');
+-- PRAGMA commands
+PRAGMA table_info('DimCurrency');
+PRAGMA table_info('DimCustomer');
+PRAGMA table_info('DimDate');
+PRAGMA table_info('DimDepartmentGroup');
+PRAGMA table_info('DimEmployee');
+PRAGMA table_info('DimGeography');
+PRAGMA table_info('DimOrganization');
+PRAGMA table_info('DimProduct');
+PRAGMA table_info('DimProductCategory');
+PRAGMA table_info('DimProductSubcategory');
+PRAGMA table_info('DimPromotion');
+PRAGMA table_info('DimReseller');
+PRAGMA table_info('DimSalesReason');
+PRAGMA table_info('DimSalesTerritory');
+PRAGMA table_info('FactCurrencyRate');
+PRAGMA table_info('FactInternetSales');
+PRAGMA table_info('FactInternetSalesReason');
+PRAGMA table_info('FactResellerSales');
+PRAGMA table_info('FactSurveyResponse');
