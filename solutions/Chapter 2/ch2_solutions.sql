@@ -133,3 +133,26 @@ INNER JOIN FactSurveyResponse
  ON FactCurrencyRate.Date = FactSurveyResponse.Date;
 
 -- Try It: Self JOIN
+--example
+SELECT
+  A.EnglishProductName,
+  B.EnglishProductName,
+  A.ProductSubCategoryKey
+FROM DimProduct A
+INNER JOIN DimProduct B
+  ON A.ProductKey <> B.ProductKey
+  AND A.ProductSubCategoryKey = B.ProductSubCategoryKey
+ORDER BY A.ProductSubCategoryKey;
+
+-- practice
+SELECT
+  Manager.EmployeeKey AS ManagerID,
+  Manager.FirstName AS ManagerFirstName,
+  Manager.LastName AS ManagerLastName,
+  Employee.EmployeeKey AS EmployeeID,
+  Employee.FirstName AS EmployeeFirstName,
+  Employee.LastName AS EmployeeLastName
+FROM DimEmployee Employee
+INNER JOIN DimEmployee Manager
+  ON Employee.ParentEmployeeKey = Manager.EmployeeKey
+ORDER BY Employee.ParentEmployeeKey;
