@@ -74,6 +74,8 @@ FROM FactResellerSales;
 SELECT COUNT(*) AS FactSurveyResponseRows
 FROM FactSurveyResponse;
 
+SELECT * FROM DimDate;
+
 -- 3. Document the CREATE script for each database table
 SELECT sql AS CreateTableScript
 FROM sqlite_master
